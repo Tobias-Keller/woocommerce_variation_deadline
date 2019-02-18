@@ -53,7 +53,6 @@ class woo_variation_deadline {
 	}
 
 	public function variationDeadlineJob(){
-		bcis_main::bcis_logger( 'Variationen überprüft' );
 		/* get all variations with deadline */
 		global $wpdb;
 		$variations = $wpdb->get_results("SELECT * FROM $wpdb->postmeta WHERE meta_key = '_variation_deadline' AND NOT meta_value = '' ");
